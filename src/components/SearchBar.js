@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
   onFormSubmit = (event) => {
     event.preventDefault();
 
-    //TODO: Make sure we call callback from parent component
+    this.props.onFormSubmit(this.state.term);
   };
   /*onChange is a special name for the attribute below and gets called 
    any time input gets changed; if we do not use it for the callback 
