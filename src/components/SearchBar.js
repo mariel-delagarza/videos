@@ -6,9 +6,9 @@ class SearchBar extends React.Component {
   we are saving our data inside the component and not inside the DOM*/
   state = { term: ''};
 
-  onInputChange = () => {
-    
-  }
+  onInputChange = (event) => {
+    this.setState({term: event.target.value});
+  };
   /*onChange is a special name for the attribute below and gets called 
    any time input gets changed; if we do not use it for the callback 
    function we will not be able to change the value of our state*/
